@@ -1,0 +1,14 @@
+package jp.ac.it_college.std.s21016.news_manager.infrastructure.database.record
+
+import java.sql.Timestamp
+
+data class NewsWithCategoryRecord(
+    val id: Long? = null,
+    val title: String? = null,
+    val body: String? = null,
+    val categoryId: Long? = null,
+    val userId: Long? = null,
+    val createAt: Timestamp? = null,
+    val publishAt: Timestamp? = null,
+    val name: String? = null
+)
