@@ -41,13 +41,13 @@ interface NewsWithCategoryMapper {
 
 
     @SelectProvider(type = SqlProviderAdapter::class, method = "select")
-    @ResultMap("NewsWithCategoryResult")
+    @ResultMap("NewsWithCategoryRecordResult")
     fun selectOne(selectStatement: SelectStatementProvider): NewsWithCategoryRecord?
 }
 
 
 
-private val columnList = listOf(id, title, body, categoryId, userId,createAt, publishAt)
+private val columnList = listOf(id, title, categoryId, createAt, publishAt,userId,body)
 
 fun NewsWithCategoryMapper.select(completer: SelectCompleter): List<NewsWithCategoryRecord> =
     select(columnList) {

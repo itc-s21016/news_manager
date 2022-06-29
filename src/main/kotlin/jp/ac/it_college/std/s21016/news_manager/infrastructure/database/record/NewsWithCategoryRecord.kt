@@ -5,10 +5,10 @@ import java.sql.Timestamp
 data class NewsWithCategoryRecord(
     val id: Long? = null,
     val title: String? = null,
-    val body: String? = null,
     val categoryId: Long? = null,
-    val userId: Long? = null,
     val createAt: Timestamp? = null,
     val publishAt: Timestamp? = null,
-    val name: String? = null
+    val userId: Long? = null,
+    val body: String? = null,
+    val name: String? = null,
 )
