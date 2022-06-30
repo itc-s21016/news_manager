@@ -16,7 +16,7 @@ class UserRepositoryImpl(
     override fun find(email: String): Users? {
         val record = mapper.selectOne {
             where {
-                UsersDynamicSqlSupport.users.username isEqualTo username
+                UsersDynamicSqlSupport.users.username isEqualTo email
             }
         }
         return record?.let { toModel(it) }

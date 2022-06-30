@@ -10,7 +10,7 @@ data class News(
     var id: Long? = null,
     var title: String? = null,
     var categoryId: Long? = null,
-    var publishAt: Timestamp = null,
+    var publishAt: LocalDateTime? = null,
     var createAt: LocalDateTime? = null,
     var userId: Long? = null,
     var body: String? = null

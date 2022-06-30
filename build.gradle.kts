@@ -30,6 +30,9 @@ dependencies {
     implementation("org.mybatis.dynamic-sql:mybatis-dynamic-sql:1.4.0")
     implementation("org.mariadb.jdbc:mariadb-java-client:3.0.5")
     mybatisGenerator("org.mybatis.generator:mybatis-generator-core:1.4.1")
+
+    implementation("org.springframework.session:spring-session-data-redis")
+    implementation("redis.clients:jedis")
 }
 
 tasks.withType<KotlinCompile> {

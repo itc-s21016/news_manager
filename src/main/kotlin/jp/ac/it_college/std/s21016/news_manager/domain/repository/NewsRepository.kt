@@ -9,4 +9,5 @@ interface NewsRepository {
     fun findWithCategory(id: Long): NewsWithCategoryModel?
 
     fun register(news: News)
+
 }

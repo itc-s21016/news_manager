@@ -41,7 +41,7 @@ interface NewsWithCategoryMapper {
 
 
     @SelectProvider(type = SqlProviderAdapter::class, method = "select")
-    @ResultMap("NewsWithCategoryRecordResult")
+    @ResultMap("NewsWithCategoryResult")
     fun selectOne(selectStatement: SelectStatementProvider): NewsWithCategoryRecord?
 }
 
