@@ -28,6 +28,7 @@ class SecurityConfig(private val authenticatorService: AuthenticationService) {
         http.authorizeRequests {
             it
                 .mvcMatchers("/login").permitAll()
+                .mvcMatchers("/news/list").permitAll()
                 .mvcMatchers("/admin/**").hasAuthority(RoleType.ADMIN.toString())
                 .anyRequest().authenticated()
         }.formLogin{

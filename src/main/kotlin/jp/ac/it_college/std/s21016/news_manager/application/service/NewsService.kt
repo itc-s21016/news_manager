@@ -1,8 +1,10 @@
 package jp.ac.it_college.std.s21016.news_manager.application.service
 
+import jp.ac.it_college.std.s21016.news_manager.domain.model.NewsModel
 import jp.ac.it_college.std.s21016.news_manager.domain.model.NewsWithCategoryModel
 import jp.ac.it_college.std.s21016.news_manager.domain.repository.NewsRepository
 import org.springframework.stereotype.Service
+import org.springframework.transaction.annotation.Transactional
 
 @Service
 class NewsService(

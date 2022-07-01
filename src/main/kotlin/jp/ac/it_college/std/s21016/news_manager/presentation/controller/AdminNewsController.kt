@@ -1,5 +1,6 @@
 package jp.ac.it_college.std.s21016.news_manager.presentation.controller
 
+import jp.ac.it_college.std.s21016.news_manager.application.security.NewsManagerUserDetails
 import jp.ac.it_college.std.s21016.news_manager.application.service.AdminNewsService
 import jp.ac.it_college.std.s21016.news_manager.infrastructure.database.record.News
 import jp.ac.it_college.std.s21016.news_manager.presentation.form.RegisterNewsRequest
@@ -19,7 +20,7 @@ class AdminNewsController(
 ) {
     @PostMapping("/register")
     fun register(@RequestBody request: RegisterNewsRequest, authentication: Authentication) {
-        //val pribcipal = authentication.principal as
+        val pribcipal = authentication.principal as NewsManagerUserDetails
         adminNewsService.register(
             News(
                 0,
